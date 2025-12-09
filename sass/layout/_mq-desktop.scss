@@ -38,4 +38,23 @@
             border-radius: $radio-borde;
         }
     }
+
+    .nosotros {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+
+        .titulo-nosotros {
+            font-size: 2.2rem;
+        }
+
+        .descripcion-nosotros {
+            font-size: 1.2rem;
+        }
+
+        .img-nosotros {
+            float: right;
+            margin-left: 2rem;
+        }
+    }
 }

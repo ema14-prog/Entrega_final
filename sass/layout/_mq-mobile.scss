@@ -70,6 +70,23 @@
         }
     }
 
+    .nosotros {
+        padding: 1rem;
+
+        .titulo-nosotros {
+            font-size: 1.5rem;
+        }
+        
+        .descripcion-nosotros {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .img-nosotros{
+            max-width: 100%;
+        }
+    }
+
     .footer {
         font-size: 0.9rem;
         padding: 0.8rem;
