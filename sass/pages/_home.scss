@@ -2,6 +2,8 @@
 @use "../utilities/variables" as *;
 //MIXIN
 @use "../utilities/mixin" as *;
+//ANIMACIONES
+@use "../utilities/animations" as *;
 
 //HEADER Y NAV
 header {
@@ -52,24 +54,35 @@ main {
 
         .galeria {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
-            margin-top: 2rem;
+            align-items: stretch;
         }
 
         .producto {
-            max-width:  300px;
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             text-align: center;
             
-            .img-producto {
-                width: 100%;
-                max-width: 300px;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 6px;
-                @include sombra;   
-            }
+        }  
+           .img-producto {
+              width: 100%;
+              height: 250px;
+              object-fit: cover;
+              border-radius: $radio-borde;
+              opacity: 0;
+              transform: translateY(20px);
+              animation: aparecer 1s ease forwards;
+             }
+           
+        
+
+
+        .producto:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
         }
     }
 
@@ -144,10 +157,23 @@ main {
             border-radius: 4px;
         }    
     }
+
+    h1, h2, h3, h4{
+        color: $color-acento;
+    }
+
+    .nav-link:hover {
+        color: $color-acento;
+    }
 }
 
 //NOSOTROS
 .nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
     @include section;
     text-align: center;
 
@@ -159,17 +185,24 @@ main {
 
     .descripcion-nosotros {
         @include font-size(1.1rem);
+        flex: 2rem;
         max-width: 800px;
         margin: 0 auto 2rem auto;
     }
 
     .img-nosotros {
-        width: 100%;
+        flex: 1;
+        width: 400px;
         max-width: 400px;
         height: auto;
         border-radius: $radio-borde;
         margin: 0 auto;
+        object-fit: cover;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: aparecer 1s ease forwards;
     }
+    
 }
 
 //FOOTER

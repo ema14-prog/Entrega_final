@@ -12,6 +12,12 @@ body {
   line-height: 1.6;
 }
 
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 header .logo-nav {
   background-color: #ffffff;
   border-bottom: 1px solid #ccc;
@@ -60,22 +66,29 @@ main .productos .descripcion-productos {
 }
 main .productos .galeria {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  align-items: stretch;
 }
 main .productos .producto {
-  max-width: 300px;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
-main .productos .producto .img-producto {
+main .productos .img-producto {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 1s ease forwards;
+}
+main .productos .producto:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 main .servicios {
   max-width: 800px;
@@ -148,8 +161,18 @@ main .contacto input, main .contacto textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+main h1, main h2, main h3, main h4 {
+  color: #c00000;
+}
+main .nav-link:hover {
+  color: #c00000;
+}
 
 .nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,15 +191,21 @@ main .contacto input, main .contacto textarea {
 .nosotros .descripcion-nosotros {
   font-size: 1.1rem;
   line-height: 1.6;
+  flex: 2rem;
   max-width: 800px;
   margin: 0 auto 2rem auto;
 }
 .nosotros .img-nosotros {
-  width: 100%;
+  flex: 1;
+  width: 400px;
   max-width: 400px;
   height: auto;
   border-radius: 6px;
   margin: 0 auto;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 1s ease forwards;
 }
 
 footer {
