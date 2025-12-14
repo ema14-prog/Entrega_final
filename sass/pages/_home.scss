@@ -5,18 +5,17 @@
 //ANIMACIONES
 @use "../utilities/animations" as *;
 
-//HEADER Y NAV
-// header {
-//     .logo-nav{
-//     background-color: $body-bg;
-//     border-bottom: 1px solid $color-borde;
 
-//         img {
-//         max-height: 80px;
-//         }
-//     }    
-// }
 header {
+
+    .logo-nav {
+        img {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: aparecerlogo 1s ease forwards;
+        }
+    }
+
     top: 0;
     z-index: 1000;
     background-color: $color-primario;
