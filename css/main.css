@@ -301,27 +301,48 @@ footer a:hover {
     flex: 1;
   }
   .presentacion .texto-presentacion p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.3rem;
+    line-height: 1.6;
   }
   .presentacion .imagen-presentacion {
     flex: 1;
   }
   .presentacion .imagen-presentacion img {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
   }
   .productos .galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    justify-items: center;
+    align-items: start;
+  }
+  .productos .producto {
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productos .img-producto {
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
   }
   .servicios {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
   }
   .servicios .titulo-servicios {
     grid-column: 1/2;
@@ -330,7 +351,7 @@ footer a:hover {
   }
   .servicios .descripcion-servicios {
     grid-column: 1/2;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     text-align: left;
   }
@@ -345,51 +366,77 @@ footer a:hover {
   .servicios .btn-contacto {
     grid-column: 1/2;
     margin-top: 1rem;
-    justify-self: start;
+    justify-self: center;
   }
   .servicios .img-servicios {
-    grid-column: 2/3;
+    grid-column: 1/2;
+    width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 80vh;
+    object-fit: cover;
     border-radius: 6px;
     align-self: center;
   }
   .contacto {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
   }
-  .contacto h1, .contacto h2 {
-    grid-column: 1/3;
+  .contacto h1,
+  .contacto h2 {
+    grid-column: 1;
     text-align: center;
     margin-bottom: 1rem;
   }
   .contacto form {
-    grid-column: 1/2;
-    flex: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .contacto .img-contacto {
-    grid-column: 2/3;
+    grid-row: 2;
+    width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-    align-self: center;
+    margin: 0 auto;
   }
   .nosotros {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     gap: 2rem;
-    text-align: left;
+    text-align: center;
   }
-  .nosotros .titulo-nosotros,
-  .nosotros .descripcion-nosotros {
-    grid-column: 1/2;
+  .nosotros .texto-nosotros {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
-  .nosotros .img-nosotros {
-    grid-column: 2/3;
+  .nosotros .texto-nosotros .titulo-nosotros {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .nosotros .texto-nosotros .descripcion-nosotros {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  .nosotros .texto-nosotros .img-nosotros {
+    grid-row: 2;
+    width: 100%;
     align-self: center;
     max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 0 auto;
+    object-fit: cover;
   }
   .footer {
     font-size: 1rem;
