@@ -42,19 +42,26 @@
     .nosotros {
         max-width: 1200px;
         margin: 0 auto;
-        text-align: left;
+        text-align: center;
 
         .titulo-nosotros {
             font-size: 2.2rem;
+            margin-bottom: 1rem;
         }
 
         .descripcion-nosotros {
             font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         .img-nosotros {
-            float: right;
-            margin-left: 2rem;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: $radio-borde;
+            object-fit: cover;
+            float: none;
         }
     }
 }
