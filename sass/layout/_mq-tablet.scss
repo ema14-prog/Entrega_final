@@ -124,24 +124,24 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         gap: 2rem;
-        align-items: center;
+        text-align: center;
 
-        h1,
-        h2 {
+        
+        h1, h2 {
+            grid-row: 1;
             grid-column: 1;
-            text-align: center;
             margin-bottom: 1rem;
         }
 
         form {
-            grid-row: 1;
+            grid-row: 2;
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .img-contacto {
-            grid-row: 2;
+            grid-row: 3;
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -178,7 +178,7 @@
             }
 
             .img-nosotros {
-                
+
                 grid-row: 2;
                 width: 100%;
                 align-self: center;
@@ -190,10 +190,11 @@
             }
         }
     }
-        .footer {
-            font-size: 1rem;
-            padding: 1.2rem;
-            text-align: center;
-            margin-top: auto;
-        }
+
+    .footer {
+        font-size: 1rem;
+        padding: 1.2rem;
+        text-align: center;
+        margin-top: auto;
+    }
 }
