@@ -25,21 +25,6 @@ Este proyecto refleja una base sólida en desarrollo front-end, y demuestra capa
 - **HTML5** — Estructura y contenido del sitio  
 - **CSS3** — Estilos y diseño visual  
 - **SASS** — Preprocesador para estilos organizados y reutilizables
-
----
-
-## 📁 Estructura del Proyecto
-
-Entrega_final/
-├── index.html
-├── css/
-│ ├── main.css
-│ └── styles.scss
-├── images/
-│ └── (imágenes del proyecto)
-└── README.md
-
-
 ---
 
 ## 📍 Cómo Ver el Proyecto
